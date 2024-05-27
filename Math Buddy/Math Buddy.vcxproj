@@ -128,6 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="mbInt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mbInt.h" />
+    <ClInclude Include="MathBuddy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
