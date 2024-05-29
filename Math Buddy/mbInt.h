@@ -2,28 +2,28 @@
 
 #include "MathBuddy.h"
 
-namespace mb {
-	class mbInt {
+namespace mthbd {
+	class Int {
 	private:
-		std::vector<int> digits;
+		std::vector<bool> bits; // stored in reverse order for simpler calculations
 		bool isNegative;
 
-		void removeFrontZeros();
-
 	public:
-		mbInt(std::string number);
-		mbInt(long long number);
-		mbInt(std::vector<int> digits, bool isNegative);
-
-		//mbInt add(const mbInt& x1, const mbInt& x2);
-
-		std::string getString() const;
+		// constructors
+		Int(long long num);
+		Int(std::string num);
+		Int(std::vector<bool> bits, bool isNegative);
 
 
+		// printing
+		std::string getBitsString();
 
 
-		friend mbInt add(const mbInt& x1, const mbInt& x2);
-		friend mbInt operator+(const mbInt& obj1, const mbInt& obj2);
-		friend std::ostream& operator<<(std::ostream& os, const mbInt& obj);
+		// external operations
+		friend Int sum(const Int& term1, const Int& term2);
+		friend Int difference(const Int& term1, const Int& term2);
 	};
+
+	Int sum(const Int& term1, const Int& term2);
+	Int difference(const Int& term1, const Int& term2);
 }

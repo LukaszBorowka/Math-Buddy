@@ -2,11 +2,10 @@
 
 int main(int argc, char* argv[]) {
 
-	mb::mbInt x1 = 12345;
-	mb::mbInt x2 = 1;
+	mthbd::Int x = 100000;
+	mthbd::Int y = 321;
 
-	std::cout << x1 + x2;
-
+	std::cout << mthbd::sum(x, y).getBitsString();
 
 	return EXIT_SUCCESS;
 }
